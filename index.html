@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentCar - Portal de Locação de Veículos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>RentCar</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cotacao" class="nav-link">Cotação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#categorias" class="nav-link">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Encontre o carro ideal para sua viagem</h1>
+                <p class="hero-subtitle">Compare preços e reserve seu veículo com facilidade e segurança</p>
+                
+                <!-- Cotação Form -->
+                <div class="cotacao-form">
+                    <h3>Faça sua cotação</h3>
+                    <form id="cotacaoForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="localRetirada">Local de Retirada</label>
+                                <select id="localRetirada" required>
+                                    <option value="">Selecione o local</option>
+                                    <option value="aeroporto">Aeroporto</option>
+                                    <option value="centro">Centro da Cidade</option>
+                                    <option value="shopping">Shopping Center</option>
+                                    <option value="estacao">Estação de Trem</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="localDevolucao">Local de Devolução</label>
+                                <select id="localDevolucao" required>
+                                    <option value="">Selecione o local</option>
+                                    <option value="aeroporto">Aeroporto</option>
+                                    <option value="centro">Centro da Cidade</option>
+                                    <option value="shopping">Shopping Center</option>
+                                    <option value="estacao">Estação de Trem</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dataRetirada">Data de Retirada</label>
+                                <input type="date" id="dataRetirada" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="horaRetirada">Hora de Retirada</label>
+                                <input type="time" id="horaRetirada" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dataDevolucao">Data de Devolução</label>
+                                <input type="date" id="dataDevolucao" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="horaDevolucao">Hora de Devolução</label>
+                                <input type="time" id="horaDevolucao" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="categoria">Categoria do Veículo</label>
+                            <select id="categoria" required>
+                                <option value="">Selecione a categoria</option>
+                                <option value="economico">Econômico</option>
+                                <option value="compacto">Compacto</option>
+                                <option value="intermediario">Intermediário</option>
+                                <option value="suv">SUV</option>
+                                <option value="premium">Premium</option>
+                                <option value="luxo">Luxo</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn-cotacao">
+                            <i class="fas fa-search"></i>
+                            Buscar Veículos
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias Section -->
+    <section id="categorias" class="categorias">
+        <div class="container">
+            <h2 class="section-title">Categorias de Veículos</h2>
+            <p class="section-subtitle">Escolha a categoria ideal para sua viagem</p>
+            
+            <div class="categorias-grid">
+                <div class="categoria-card" data-categoria="economico">
+                    <div class="categoria-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Econômico</h3>
+                    <p>Perfeito para viagens urbanas e economia de combustível</p>
+                    <div class="categoria-features">
+                        <span>Até 4 pessoas</span>
+                        <span>Ar condicionado</span>
+                        <span>Manual/Automático</span>
+                    </div>
+                    <div class="categoria-price">A partir de R$ 89/dia</div>
+                </div>
+                
+                <div class="categoria-card" data-categoria="compacto">
+                    <div class="categoria-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3>Compacto</h3>
+                    <p>Conforto e praticidade para o dia a dia</p>
+                    <div class="categoria-features">
+                        <span>Até 5 pessoas</span>
+                        <span>Ar condicionado</span>
+                        <span>Direção hidráulica</span>
+                    </div>
+                    <div class="categoria-price">A partir de R$ 129/dia</div>
+                </div>
+                
+                <div class="categoria-card" data-categoria="intermediario">
+                    <div class="categoria-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Intermediário</h3>
+                    <p>Mais espaço e conforto para viagens</p>
+                    <div class="categoria-features">
+                        <span>Até 5 pessoas</span>
+                        <span>Ar condicionado</span>
+                        <span>Ar quente</span>
+                    </div>
+                    <div class="categoria-price">A partir de R$ 179/dia</div>
+                </div>
+                
+                <div class="categoria-card" data-categoria="suv">
+                    <div class="categoria-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>SUV</h3>
+                    <p>Ideal para aventuras e famílias maiores</p>
+                    <div class="categoria-features">
+                        <span>Até 7 pessoas</span>
+                        <span>4x4 disponível</span>
+                        <span>Porta-malas amplo</span>
+                    </div>
+                    <div class="categoria-price">A partir de R$ 229/dia</div>
+                </div>
+                
+                <div class="categoria-card" data-categoria="premium">
+                    <div class="categoria-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Premium</h3>
+                    <p>Luxo e sofisticação para ocasiões especiais</p>
+                    <div class="categoria-features">
+                        <span>Até 5 pessoas</span>
+                        <span>Ar condicionado</span>
+                        <span>Piloto automático</span>
+                    </div>
+                    <div class="categoria-price">A partir de R$ 299/dia</div>
+                </div>
+                
+                <div class="categoria-card" data-categoria="luxo">
+                    <div class="categoria-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Luxo</h3>
+                    <p>Máximo conforto e tecnologia de ponta</p>
+                    <div class="categoria-features">
+                        <span>Até 5 pessoas</span>
+                        <span>Ar condicionado</span>
+                        <span>Multimídia completa</span>
+                    </div>
+                    <div class="categoria-price">A partir de R$ 399/dia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados Section -->
+    <section id="resultados" class="resultados" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Veículos Disponíveis</h2>
+            <div id="resultadosContainer" class="resultados-grid">
+                <!-- Resultados serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Por que escolher a RentCar?</h2>
+                    <p>Somos especialistas em locação de veículos, oferecendo uma experiência completa e segura para nossos clientes. Com mais de 10 anos de mercado, garantimos:</p>
+                    <ul class="sobre-features">
+                        <li><i class="fas fa-check"></i> Frota moderna e bem conservada</li>
+                        <li><i class="fas fa-check"></i> Atendimento 24/7</li>
+                        <li><i class="fas fa-check"></i> Preços competitivos</li>
+                        <li><i class="fas fa-check"></i> Seguro incluso</li>
+                        <li><i class="fas fa-check"></i> Cobertura nacional</li>
+                    </ul>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat">
+                        <h3>50K+</h3>
+                        <p>Clientes Satisfeitos</p>
+                    </div>
+                    <div class="stat">
+                        <h3>1000+</h3>
+                        <p>Veículos na Frota</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Suporte</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RentCar</h3>
+                    <p>Sua melhor opção em locação de veículos</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#cotacao">Cotação</a></li>
+                        <li><a href="#categorias">Categorias</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 4002-8922</p>
+                    <p><i class="fas fa-envelope"></i> contato@rentcar.com.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RentCar. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
